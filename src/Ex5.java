@@ -14,13 +14,19 @@ public static void main(String[] args) {
     System.out.println("enter max");
     int max = scanner.nextInt();
     int count = 0;
+    System.out.println("random numbers : ");
     for (int i = 0; i < 5; i++) {
         int number = random.nextInt(min , max);
-        System.out.println("random number: " + number);
+        if (i<4){
+            System.out.print(number + ", ");
+        }else {
+            System.out.println(number);
+        }
         if (number>10){
             count++;
         }
     }
-    System.out.println("the count of ... than 10 " + count);
+    System.out.println();
+    System.out.print("the count of ... than 10: " + count);
 }
 }
